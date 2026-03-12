@@ -158,6 +158,13 @@ nav .container{
 }
 .hero .container{
   position:relative;z-index:2;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:48px;
+  align-items:center;
+}
+@media(max-width:1023px){
+  .hero .container{grid-template-columns:1fr;gap:32px}
 }
 .hero-content{position:relative;z-index:2}
 .hero-badge{
@@ -260,7 +267,17 @@ nav .container{
   z-index:2;
   animation:fadeUp .8s .3s ease both;
 }
-@media(max-width:1023px){.hero-visual{display:none}}
+.hero-video{
+  width:100%;
+  border-radius:16px;
+  border:1px solid rgba(0,194,255,.15);
+  box-shadow:0 20px 60px rgba(0,0,0,.4), 0 0 40px rgba(0,194,255,.08);
+  display:block;
+}
+@media(max-width:1023px){
+  .hero-visual{margin-top:16px}
+  .hero-video{max-width:560px}
+}
 
 .hero-mockup{
   position:relative;
@@ -790,6 +807,12 @@ footer p{color:var(--gray);font-size:.85rem}
           <p>On-demand access</p>
         </div>
       </div>
+    </div>
+
+    <div class="hero-visual">
+      <video class="hero-video" controls playsinline>
+        <source src="https://mentraprimary.blob.core.windows.net/public/who-we-are.mp4" type="video/mp4">
+      </video>
     </div>
 
   </div>
