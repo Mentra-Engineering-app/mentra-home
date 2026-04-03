@@ -576,8 +576,8 @@ footer a {
 </footer>
 
 <script>
-// Consultation API with SSL (port 3443)
-const API_URL = 'https://' + window.location.hostname + ':3443/submit';
+// Consultation API (routed through nginx)
+const API_URL = '/consultation-api/submit';
 
 const form = document.getElementById('consultForm');
 const submitBtn = document.getElementById('submitBtn');
